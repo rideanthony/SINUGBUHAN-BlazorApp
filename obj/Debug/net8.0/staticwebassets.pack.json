@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyBlazorApp.styles.css",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyBlazorApp.styles.css",
       "PackagePath": "staticwebassets\\MyBlazorApp.styles.css"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\css\\app.css",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\favicon.png",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\icon-192.png",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\index.html",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

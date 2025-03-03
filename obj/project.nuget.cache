@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f4/KcfrmOac=",
+  "dgSpecHash": "AnQ/NucfXAw=",
   "success": true,
-  "projectFilePath": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\PERSONAL_BLAZING_APP\\MyBlazorApp\\MyBlazorApp.csproj",
+  "projectFilePath": "D:\\Lorenzo_Files\\Courses_Second_Year\\2ND_SEMESTER_FILES\\ASP.Net_&_IPT\\MBA\\MyBlazorApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laroa\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.12\\microsoft.aspnetcore.authorization.8.0.12.nupkg.sha512",
     "C:\\Users\\laroa\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.12\\microsoft.aspnetcore.components.8.0.12.nupkg.sha512",
@@ -33,12 +33,5 @@
     "C:\\Users\\laroa\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\laroa\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.12\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.12.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  "logs": []
 }
