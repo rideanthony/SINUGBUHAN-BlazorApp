@@ -1,0 +1,303 @@
+﻿@page "/calculator"
+
+<style>
+    :root {
+        --color-1: #D4D4D2;
+        --color-2: #1C1C1C;
+        --color-3: #505050;
+        --color-4: #FF9500;
+    }
+
+    .calculator-container {
+        font-family: "SF Pro Text";
+        font-style: normal;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProText-Bold.ttf");
+        width: 500px;
+        height: 700px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: var(--color-2);
+        border: 1px solid #1C1C1C;
+        border-radius: 35px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+        margin: 5px;
+        border-radius: 50px;
+        border: none;
+        
+    }
+
+    
+
+    .upper {
+        grid-template-columns: repeat(3, 4);
+    }
+
+    .lower {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    input[type="text"]:empty::before {
+        content: "0";
+        color: #ccc;
+    }
+
+    input[type="text"] {
+        text-align: right;
+    }
+
+    .gold {
+        background-color: var(--color-4);
+        color: #D4D4D2;
+        font-size: 17px;
+        font-weight: 12000px !importants;
+    }
+
+    .firstrow {
+        background-color: var(--color-1);
+    }
+
+    .secondrow {
+        background-color: var(--color-3);
+        color: #D4D4D2;
+    }
+
+    input[type="text"] {
+        `
+    }
+
+    input[type="text"]:hover {
+        background-color: var(--color-4);
+        color: #fff;
+    }
+
+    input[type="text"]:active {
+        background-color: var(--color-4);
+        color: #fff;
+    }
+
+    input[type="text"]:focus {
+        background-color: var(--color-4);
+        color: #fff;
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hover {
+        margin-top: 30px;
+        height: 5px;
+        margin-left: 78px;
+        width: 100px;
+        pointer-events: none;
+    }
+</style>
+
+<div class="calculator-container">
+    <h3 style="text-align: center; margin-top: 10px;">Calculator</h3>
+    <input @bind="display" type="text" readonly style="width: 240px; height: 70px; font-size: 45px; background-color: transparent;
+    border: none; color: white" />
+    <div class="functions" <div class="upper">
+        <button class="button firstrow" @onclick="Clear">C</button>
+        <button class="button firstrow" @onclick="Delete">DEL</button>
+        <button class="button firstrow" @onclick="AppendOperationModulo">% </button>
+
+        <button class="button gold" @onclick="AppendOperationDivide">÷</button>
+
+        <button class="button secondrow" @onclick="AppendNumber7">7</button>
+        <button class="button secondrow" @onclick="AppendNumber8">8</button>
+        <button class="button secondrow" @onclick="AppendNumber9">9</button>
+
+        <button class="button gold" @onclick="AppendOperationMultiply">×</button>
+
+        <button class="button secondrow" @onclick="AppendNumber4">4</button>
+        <button class="button secondrow" @onclick="AppendNumber5">5</button>
+        <button class="button secondrow" @onclick="AppendNumber6">6</button>
+
+        <button class="button gold" @onclick="AppendOperationSubtract">-</button>
+
+        <button class="button secondrow" @onclick="AppendNumber1">1</button>
+        <button class="button secondrow" @onclick="AppendNumber2">2</button>
+        <button class="button secondrow" @onclick="AppendNumber3">3</button>
+
+        <button class="button gold" @onclick="AppendOperationAdd" style="font-weight: bolder;">+</button>
+    </div>
+    <div class="lower">
+        <button class="button secondrow" @onclick="AppendNumber0" style="width: 114px;">0</button>
+        <button class="button secondrow" @onclick="AppendDecimal">.</button>
+        <button class="button gold"  @onclick="Calculate">=</button>
+        <button class="button hover"></button>
+
+    </div>
+</div>
+</div>
+
+@code {
+    private string display = "";
+    private string operation = "";
+    private double num1 = 0;
+    private double num2 = 0;
+    private bool isNum1 = true;
+
+    private void AppendNumber7() => AppendNumber(7);
+    private void AppendNumber8() => AppendNumber(8);
+    private void AppendNumber9() => AppendNumber(9);
+    private void AppendOperationDivide() => AppendOperation("/");
+    private void AppendOperationModulo() => AppendOperation("%");
+
+    private void AppendNumber4() => AppendNumber(4);
+    private void AppendNumber5() => AppendNumber(5);
+    private void AppendNumber6() => AppendNumber(6);
+    private void AppendOperationMultiply() => AppendOperation("*");
+
+    private void AppendNumber1() => AppendNumber(1);
+    private void AppendNumber2() => AppendNumber(2);
+    private void AppendNumber3() => AppendNumber(3);
+    private void AppendOperationSubtract() => AppendOperation("-");
+
+    private void AppendNumber0() => AppendNumber(0);
+    private void AppendOperationAdd() => AppendOperation("+"); private void AppendNumber(int number)
+    {
+        if (isNum1)
+        {
+            if (display.Contains("."))
+            {
+                display += number.ToString();
+                num1 = double.Parse(display);
+            }
+            else
+            {
+                num1 = num1 * 10 + number;
+                display = num1.ToString();
+            }
+        }
+        else
+        {
+            if (display.Contains("."))
+            {
+                display += number.ToString();
+                num2 = double.Parse(display);
+            }
+            else
+            {
+                num2 = num2 * 10 + number;
+                display = num2.ToString();
+            }
+        }
+    }
+
+    private void AppendDecimal()
+    {
+        if (isNum1)
+        {
+            if (!display.Contains("."))
+            {
+                display += ".";
+                num1 = double.Parse(display);
+            }
+        }
+        else
+        {
+            if (!display.Contains("."))
+            {
+                display += ".";
+                num2 = double.Parse(display);
+            }
+        }
+    }
+
+    private void AppendOperation(string op)
+    {
+        operation = op;
+        isNum1 = false;
+        display = "";
+    }
+
+    private void Calculate()
+    {
+        double result = 0;
+        switch (operation)
+        {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    display = "Error: Division by zero";
+                    return;
+                }
+                break;
+            case "%":
+                if (num2 != 0)
+                {
+                    result = num1 % num2;
+                }
+                else
+                {
+                    display = "Error: Division by zero";
+                    return;
+                }
+                break;
+        }
+        display = result.ToString();
+        num1 = result;
+        num2 = 0;
+        isNum1 = true;
+    }
+
+    private void Clear()
+    {
+        display = "0";
+        num1 = 0;
+        num2 = 0;
+        isNum1 = true;
+    }
+
+    private void Delete()
+    {
+        if (isNum1)
+        {
+            string numStr = num1.ToString();
+            if (numStr.Contains("."))
+            {
+                numStr = numStr.Substring(0, numStr.Length - 1);
+                num1 = double.Parse(numStr);
+            }
+            else
+            {
+                num1 = (int)(num1 / 10);
+            }
+            display = num1.ToString();
+        }
+        else
+        {
+            string numStr = num2.ToString();
+            if (numStr.Contains("."))
+            {
+                numStr = numStr.Substring(0, numStr.Length - 1);
+                num2 = double.Parse(numStr);
+            }
+            else
+            {
+                num2 = (int)(num2 / 10);
+            }
+            display = num2.ToString();
+        }
+    }
+}

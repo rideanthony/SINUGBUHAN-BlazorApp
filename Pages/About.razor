@@ -1,0 +1,59 @@
+﻿@page "/about"
+
+<h3>User Information Form</h3>
+
+<div class="mb-3">
+    <label class="form-label"> Name:</label>
+    <input @bind="UserName" class="form-control" type="text" placeholder="Enter your name" />
+</div>
+
+<div class="mb-3">
+    <label class="form-label"> Age:</label>
+    <input @bind="UserAge" class="form-control" type="text" placeholder="Enter your age" />
+
+</div>
+
+<div class="mb-3">
+    <label class="form-label"> Talent:</label>
+    <input @bind="UserTalent" class="form-control" type="text" placeholder="Enter your talent" />
+</div>
+
+
+<div class="mb-3">
+    <label class="form-label"> Motto:</label>
+    <input @bind="UserMotto" class="form-control" type="text" placeholder="Enter your motto" />
+</div>
+
+<div class="mb-3">
+    <label class="form-label"> Address:</label>
+    <input @bind="UserAddress" class="form-control" type="text" placeholder="Enter your address" />
+</div>
+
+<button @onclick="ShowUserInfo" class="btn btn-primary">Submit</button>
+
+@if (ShowInfo)
+{
+    <div class="mt-4 p-3 border rounded bg-light">
+        <h4>Entered Information:</h4>
+        <p><strong>Name:</strong> @UserName</p>
+        <p><strong>Age:</strong> @UserAge</p>
+        <p><strong>Talent:</strong> @UserTalent</p>
+        <p><strong>Motto:</strong> @UserMotto</p>
+        <p><strong>Address:</strong> @UserAddress</p>
+    </div>
+}
+
+@code {
+    private string UserName = "";
+    private string UserAge = "";
+    private string UserTalent = "";
+
+    private string UserMotto = "";
+    private string UserAddress = "";
+    private bool ShowInfo = false;
+
+    private void ShowUserInfo()
+    {
+        ShowInfo = true;
+    }
+}
